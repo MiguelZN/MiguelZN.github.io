@@ -1,5 +1,5 @@
 //CLIENT CODE
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://miguelzn.github.io');
 socket.on('connect',function(){
 	SOCKET_ID = socket.io.engine.id; //gives the variable 'SOCKET_ID' to the client, the socket 
 									//connection unique id (to idenify client-speciifc player)
