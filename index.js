@@ -136,7 +136,8 @@ var port = 80;
 var io = socket(server);
 
 
-var server = app.listen(port, function(req,res){
+
+var server = server.listen(port, function(req,res){
 	console.log(getRandomColor());
 	console.log('server online');
 
