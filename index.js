@@ -1,8 +1,5 @@
 //SERVER CODE-----------------------------------------------------------------------------
 
-var express = require('express');
-var app = express();
-var socket = require('socket.io');
 //var FIO = require('./FIOserver_classes.js');
 // var SimpleGameElement = require('./SimpleGameElement');
 // var Resource = require('./Resource');
@@ -131,7 +128,15 @@ function convertTimeToMilliseconds(hours, minutes, seconds){
 
 //------------------------------------------------------------------------
 //Setting up the server
-var server = app.listen(3000, function(req,res){
+var express = require('express');
+var app = express();
+var socket = require('socket.io');
+var port = 80;
+//Socket Setup
+var io = socket(server);
+
+
+var server = app.listen(port, function(req,res){
 	console.log(getRandomColor());
 	console.log('server online');
 
@@ -145,8 +150,7 @@ app.get('/',function(req,res){
 })
 
 
-//Socket Setup
-var io = socket(server);
+
 
 io.on('connection',function(socket){
 	console.log('User '+socket.id+' has logged on.');
