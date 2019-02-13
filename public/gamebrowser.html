@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FallsIO</title>
+	<link rel="stylesheet" type="text/css" href="gamebrowser.css">
+</head>
+<body>
+	<div id ="titlelogocontainer" class = "CENTER GROOVE">
+		<p id = "usertitle" class ='FONT1'> </p>
+		<img id ="titlelogo" src = "feintiologo4.png">
+		<p id = "numberofplayers" class = 'FONT1'></p>
+	</div>
+
+
+	<video loop muted autoplay id="backgroundvid" class = "fullscreen-bg">
+			<source src = "feintiovid1.mov">
+	</video>
+
+	<div id= "userlogincontainer" class= "CENTER GROOVE video_overlays">
+		<b><p id="usernametext" class="FONT1">Username:</p></b>
+
+		<input id = "usernameinput" class ="LEFT FONT2 " type="text" name="username" placeholder="Type your in-game name...">
+
+		<button id="playbutton" class="CENTER FONT1">Play</button>
+
+	</div>
+
+
+	<!--GAMEWINDOWS><!-->
+	<div id = "canvascontainer" class= "CENTER">
+		<div id = "scoreandchatcontainer" class = "CENTER GROOVE">
+			<div id = "scorecontainer" ></div>
+				<p id = "scoretitle" class ="FONT1"><b><ins>Score:</ins></b></p>
+			<div id = "chatcontainer">
+				<p id = "chattitle" class ="FONT1"><b><ins>Chat:</ins></b></p>
+				<div id = "chat" class = "CENTER"></div>
+			</div>
+		</div>
+		<canvas id = "canvas" height="500" width="750">FallsIO GameWindow</canvas>
+	</div>
+
+
+
+
+	<!--SCRIPTS><!-->
+	<script type="text/javascript" src= "/socket.io/socket.io.js"> </script>
+	<script type ="text/javascript" src= "game_elements.js"></script>
+	<script type="text/javascript" src="FIOclasses.js"></script>
+	<script type="text/javascript" src="client.js"></script>
+
+</body>
+</html>

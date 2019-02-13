@@ -1,0 +1,172 @@
+body{
+	height: 100%;
+	width: 100%;
+	background-color: rgb(250,250,250);
+	overflow: hidden; /*removes the scrollbar*/
+}
+.video_overlays {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.46);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 10;
+  bottom: 40%;
+}
+
+.fullscreen-bg {
+  width: 100%;
+  height: 30%;
+  z-index: -1;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    height: 100%;
+}
+
+.CENTER{
+	text-align: center;
+	align-self: center;
+	display: block;
+
+	margin:0 auto;
+}
+
+.LEFT{
+	text-align: left;
+}
+
+.GROOVE{
+	border-style: groove;
+}
+
+.FONT1{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 20px;
+}
+
+.FONT2{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 15px;
+}
+
+#titlelogocontainer{
+	background-color: rgb(183, 177, 159);
+	position: relative;
+	height: 20%;
+}
+
+#titlelogo{
+	width: 30%;
+	height: 50%;
+	border: rgb(0,0,0); border-width: 1px;
+}
+
+#userlogincontainer{
+	width: 25%;
+	background-color: rgb(229, 224, 208);
+	text-align: center;
+	z-index: 0;
+}
+
+#usernameinput{
+	padding-top: 5px;
+	width: 90%;
+	height: 8vh;
+
+}
+
+#playbutton{
+	width: 50%;
+	margin-top: 10px;
+	height: 8vh;
+	margin-bottom: 10px;
+}
+
+#usertitle{
+	position: absolute;
+	margin-bottom: 0px;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+}
+
+#numberofplayers{
+	position: absolute;
+	margin-bottom: 0px;
+	bottom: 0;
+	right: 15px;
+	display: inline-block;
+}
+
+/*GAMEWINDOWS*/
+#canvas{
+	background-color: #7bb658;
+	display: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	/*filter: grayscale(100%);  USING THE GRAYSCALE WE CAN MAKE A DAY/NIGHT CYCLE*/
+}
+
+#scoreandchatcontainer{
+	position: absolute;
+	left: 0;
+	margin-left: 10px;
+	display: none;
+	width: 23%;
+	height: 75%;
+}
+
+#scorecontainer{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgb(0,0,0);
+	height: 40%;
+	width: 100%;
+	display: block;
+	text-align:left;
+}
+
+#scoretitle{
+	color: rgba(255,255,255);
+	position: absolute;
+	left: 0;
+	margin-top: 2px;
+	width: 100%;
+}
+
+
+#chatcontainer{
+	position: absolute;
+	bottom: 0;
+	background: rgb(230,230,230);
+	width: 100%;
+	height: 60%;
+	display: block; /*block*/
+}
+
+#chattitle{
+	color: rgba(0,0,0);
+	position: absolute;
+	left: 0;
+	margin-top: 2px;
+	width: 100%;
+}
+
+#chat{
+	width: 95%;
+	height:85%;
+	margin-top: 10%;
+	/*display: inline-block;*/
+	padding-top: 0px;
+	background-color: rgba(0,0,0,0.3);
+	overflow-y:auto;
+	overflow-x: hidden;
+	text-align: left;
+	line-height: 20px;
+	text-shadow:0 0 1px black;
+	word-wrap: break-word;
+
+}
